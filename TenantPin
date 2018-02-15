@@ -1,0 +1,47 @@
+package program3;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TenantPin {
+
+    //arraylist of Tennant objects to hold list from source file
+    ArrayList<String> tenant = new ArrayList<>();
+
+    {
+        try {
+            //intsantiate file
+            File file = new File("tenants.txt");
+            //scanner for file
+            Scanner inputFile = new Scanner(file);
+            //loop to get contents of file into ArrayList
+            while (inputFile.hasNext()) {
+                //take in next line
+                String nextLine = inputFile.nextLine();
+
+                //scanner for next line
+                Scanner separation = new Scanner(nextLine);
+                //set delimiter to space
+                separation.useDelimiter(" ");
+
+                //store file into arraylist
+                tenant.add(inputFile.nextLine().toUpperCase());
+            }
+        } catch (FileNotFoundException e) {
+            System.out.print("\n\n!!! File \"tenants.txt\" not found! Place file in project directory and restart application."
+                    + "/nPlease press enter to exit the program: ");
+            //kb.next();
+            //program can't function without the file so exit
+            System.exit(0);
+        }
+
+    public boolean lookup(String apt, String pin) {
+        {
+            return tenant.name;
+        }
+
+    }
+}
+    
