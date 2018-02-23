@@ -1,0 +1,29 @@
+/*
+ * Linda Oglesbee & Nick Dea
+ * Febuary 26 2018
+ * Tenant 
+ * This class is for creating a Tenant object 
+ */
+package program3;
+
+import java.util.*;
+import java.io.*;
+
+public class Tenant 
+{
+    private int roomNumber;
+    private int pinNumber;
+    private String tenantName;
+            
+    public Tenant(int rNum, int pNum, String tenName)
+    {
+        rNum = roomNumber;
+        pNum = pinNumber;
+        tenName = tenantName;
+    }
+    
+    public String getTenName(int rNum, int pNum)
+    {
+        return tenantName;
+    }
+}
