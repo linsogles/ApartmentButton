@@ -5,43 +5,57 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class TenantPin {
+public class TenantPin 
+{
 
     //arraylist of Tennant objects to hold list from source file
-    ArrayList<String> tenant = new ArrayList<>();
-
+    ArrayList<Tenant> tenants = new ArrayList<>();
+    
     {
-        try {
+        try 
+        {
+            int count = 0;
             //intsantiate file
             File file = new File("tenants.txt");
             //scanner for file
             Scanner inputFile = new Scanner(file);
             //loop to get contents of file into ArrayList
-            while (inputFile.hasNext()) {
+            while (inputFile.hasNext()) 
+            {
                 //take in next line
                 String nextLine = inputFile.nextLine();
 
                 //scanner for next line
                 Scanner separation = new Scanner(nextLine);
                 //set delimiter to space
-                separation.useDelimiter(" ");
+                separation.useDelimiter("#");
 
                 //store file into arraylist
-                tenant.add(inputFile.nextLine().toUpperCase());
+                tenants.get(count).setRNum(inputFile.next());
+                tenants.get(count).setPNum(inputFile.next());
+                tenants.get(count).setTenName(inputFile.nextLine().toUpperCase());
+                count++;
             }
-        } catch (FileNotFoundException e) {
+        } 
+        catch (FileNotFoundException e) 
+        {
             System.out.print("\n\n!!! File \"tenants.txt\" not found! Place file in project directory and restart application."
                     + "/nPlease press enter to exit the program: ");
             //kb.next();
             //program can't function without the file so exit
             System.exit(0);
         }
+    }
 
-    public boolean lookup(String apt, String pin) {
+    public boolean lookup(String apt, String pin) 
+    {
+        for(int i = 0; i < tenants.size(); i++)
         {
-            return tenant.name;
+            if(tenants.get(i).getPNum().equals(apt) && tenants.get(i).getRNum().equals(pin))
+            {                  
+                    return true;
+            }
         }
-
+        return false;
     }
 }
-    
