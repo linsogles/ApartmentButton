@@ -11,23 +11,23 @@ import java.io.*;
 
 public class Tenant 
 {
-    private int roomNumber;
-    private int pinNumber;
+    private String roomNumber;
+    private String pinNumber;
     private String tenantName;
             
-    public Tenant(int rNum, int pNum, String tenName)
+    public Tenant(String rNum, String pNum, String tenName)
     {
-        rNum = 0;
-        pNum = 0;
+        rNum = "unassigned";
+        pNum = "unassigned";
         tenName = "unassigned";
     }
     
-    public void setRNum(int rNum)
+    public void setRNum(String rNum)
     {
         rNum = roomNumber;
     }
     
-    public void setPNum(int pNum)
+    public void setPNum(String pNum)
     {
         pNum = pinNumber;
     }
@@ -37,12 +37,12 @@ public class Tenant
         tenName = tenantName;
     }
     
-    public int getRNum()
+    public String getRNum()
     {
         return roomNumber;
     }
     
-    public int getPNum()
+    public String getPNum()
     {
         return pinNumber;
     }
