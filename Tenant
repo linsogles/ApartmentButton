@@ -17,12 +17,37 @@ public class Tenant
             
     public Tenant(int rNum, int pNum, String tenName)
     {
+        rNum = 0;
+        pNum = 0;
+        tenName = "unassigned";
+    }
+    
+    public void setRNum(int rNum)
+    {
         rNum = roomNumber;
+    }
+    
+    public void setPNum(int pNum)
+    {
         pNum = pinNumber;
+    }
+    
+    public void setTenName(String tenName)
+    {
         tenName = tenantName;
     }
     
-    public String getTenName(int rNum, int pNum)
+    public int getRNum()
+    {
+        return roomNumber;
+    }
+    
+    public int getPNum()
+    {
+        return pinNumber;
+    }
+    
+    public String getTenName()
     {
         return tenantName;
     }
