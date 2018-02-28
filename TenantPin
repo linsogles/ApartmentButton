@@ -28,13 +28,13 @@ public class TenantPin
                 //scanner for next line
                 Scanner separation = new Scanner(nextLine);
                 //set delimiter to space
-                separation.useDelimiter("#");
+                separation.useDelimiter(" ");
 
                 //store file into arraylist
                 tenants.get(count).setRNum(inputFile.next());
                 tenants.get(count).setPNum(inputFile.next());
-                tenants.get(count).setTenName(inputFile.nextLine().toUpperCase());
-                count++;
+                tenants.get(count).setTenName(inputFile.nextLine());
+
             }
         } 
         catch (FileNotFoundException e) 
