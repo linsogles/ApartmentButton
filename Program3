@@ -1,11 +1,3 @@
-/*
- * Linda Oglesbee & Nick Dea
- * Febuary 26 2018
- * Program 3 
- * This class displays keypad that interacts 
- * with user to allow entry into apartment
- * based on correct pin & apartment number
- */
 package program3;
 
 import java.awt.Insets;
@@ -61,7 +53,7 @@ public class Program3 extends Application {
                     
       
         TextField KDisplay = new TextField ();
-        TilePane.getChildren().add(KDisplay);
+        tilePane.getChildren().add(KDisplay);
         
        // tilePane.set
         //HBox hbox = new HBox(KDisplay);
@@ -82,8 +74,8 @@ public class Program3 extends Application {
         button1.setPrefSize(150, 150);
         button1.setId("1");
         button1.setOnAction(new SimpleEventHandler());
-        
         button1.pressedProperty().addListener((newValue) -> KDisplay.setText("*"));
+       
         
         //btn.wrapTextProperty().setValue(true);
        // or btn.setWrapText(true);
@@ -178,6 +170,7 @@ public class Program3 extends Application {
 
         // Add the buttons to the grid.
         // Layout is column first, then row
+       // tilePane.add(KDisplay);
         gridPane.add(button1, 0, 0);
         gridPane.add(button2, 1, 0);
         gridPane.add(button3, 2, 0);
