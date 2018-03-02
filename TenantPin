@@ -51,11 +51,24 @@ public class TenantPin
     {
         for(int i = 0; i < tenants.size(); i++)
         {
-            if(tenants.get(i).getPNum().equals(apt) && tenants.get(i).getRNum().equals(pin))
+            if(tenants.get(i).getRNum().equals(apt) && tenants.get(i).getPNum().equals(pin))
             {                  
                     return true;
             }
         }
         return false;
     }
+    
+    public Tenant getTenant(String apt, String pin)
+    {
+        for(int i = 0; i < tenants.size(); i++)
+        {
+            if(tenants.get(i).getRNum().equals(apt) && tenants.get(i).getPNum().equals(pin))
+            {                  
+                    return tenants.get(i);
+            }
+        }
+        return null;
+    }
+    
 }
