@@ -33,7 +33,7 @@ public class Program3 extends Application {
             button4, button5, button6,
             button7, button8, button9,
             button10, button11,button12;;
-    public String text = "*";
+    public String text = "";
      
 
     public static void main(String[] args) {
@@ -58,9 +58,7 @@ public class Program3 extends Application {
 
         // Add the tilePane object to the root container
         root.getChildren().add(tilePane);
-        
-       
-                    
+                            
       
         TextField KDisplay = new TextField ();
         tilePane.getChildren().add(KDisplay);
@@ -77,94 +75,89 @@ public class Program3 extends Application {
        //HBox hb = new HBox();
        //hb.getChildren().addAll(textField);
        //hb.setSpacing(10);
-        
+        System.out.print(text);
 
+        
+        //(ActionListner)SimpleEventHandler.create(ActionListner.class));
+        //simpleEvent= new SimpleEventHandler();
+                
         // Set up the 12 buttons for the keypad.
         button1 = new Button("1");
         button1.setPrefSize(150, 150);
         button1.setId("1");
-        button1.setOnAction(new SimpleEventHandler());
-        button1.pressedProperty().addListener((newValue) -> KDisplay.setText(text));
+        //button1.setOnAction(new SimpleEventHandler());
+        button1.pressedProperty().addListener((setOnAction) ->KDisplay.setText(KDisplay.getText() + "*"));
+        //KDisplay.setText(KDisplay.getText() + "*") 
        
-        
-        //btn.wrapTextProperty().setValue(true);
-       // or btn.setWrapText(true);
-      // button1.setText("a b c");
-     // VBox vb1 = new VBox();
-      //Label label1 = new Label("a b c ");
-      //Label label11 = new Label("1 ");
-     // vb1.getChildren().add(button1);
-      //button1.setText("a -fx-font: 2 arial;");
-
         button2 = new Button("2");
         button2.setPrefSize(150, 150);
         button2.setId("2");
-        button2.setOnAction(new SimpleEventHandler());
-        button2.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+       // button2.setOnAction(new SimpleEventHandler());
+      //  button2.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text+1.concat("*")));
        
         button3 = new Button("3");
         button3.setPrefSize(150, 150);
         button3.setId("3");
-        button3.setOnAction(new SimpleEventHandler());
-        button3.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+       // button3.setOnAction(new SimpleEventHandler());
+        button3.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text.concat("*")));
 
         // buttons for the second row of the game
         button4 = new Button("4");
         button4.setPrefSize(150, 150);
         button4.setId("4");
-        button4.setOnAction(new SimpleEventHandler());
-        button4.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+       // button4.setOnAction(new SimpleEventHandler());
+        button4.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text.concat("*")));
 
         button5 = new Button("5");
         button5.setPrefSize(150, 150);
         button5.setId("5");
-        button5.setOnAction(new SimpleEventHandler());
-        button5.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+      //  button5.setOnAction(new SimpleEventHandler());
+        button5.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text=text.concat("*")));
 
         button6 = new Button("6");
         button6.setPrefSize(150, 150);
         button6.setId("6");
-        button6.setOnAction(new SimpleEventHandler());
-        button6.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+       // button6.setOnAction(new SimpleEventHandler());
+        button6.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text=text.concat("*")));
 
         // buttons for the third row of the game
         button7 = new Button("7");
         button7.setPrefSize(150, 150);
         button7.setId("7");
-        button7.setOnAction(new SimpleEventHandler());
-        button7.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+      //  button7.setOnAction(new SimpleEventHandler());
+        button7.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text=text.concat("*")));
 
         button8 = new Button("8");
         button8.setPrefSize(150, 150);
         button8.setId("8");
-        button8.setOnAction(new SimpleEventHandler());
-        button8.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+       // button8.setOnAction(new SimpleEventHandler());
+        button8.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text=text.concat("*")));
 
         button9 = new Button("9");
         button9.setPrefSize(150, 150);
         button9.setId("9");
-        button9.setOnAction(new SimpleEventHandler());
-        button9.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+       // button9.setOnAction(new SimpleEventHandler());
+        button9.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text.concat("*")));
         
         button10 = new Button("*");
         button10.setPrefSize(150, 150);
         button10.setId("10");
-        button10.setOnAction(new SimpleEventHandler());
-        button10.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+       // button10.setOnAction(new SimpleEventHandler());
+        button10.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text.concat("*")));
 
         
         button11 = new Button("0");
         button11.setPrefSize(150, 150);
         button11.setId("11");
-        button11.setOnAction(new SimpleEventHandler());
-        button11.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+       // button11.setOnAction(new SimpleEventHandler());
+        button11.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text.concat("*")));
 
         
         button12 = new Button("#");
         button12.setPrefSize(150, 150);
         button12.setId("12");
-        button12.setOnAction(new SimpleEventHandler());
-        button12.pressedProperty().addListener((newValue) -> KDisplay.setText(text.concat("*")));
+     //   button12.setOnAction(new SimpleEventHandler());
+        button12.pressedProperty().addListener((setOnAction) -> KDisplay.setText(text.concat("*")));
 
 
         // set up the displayable image
@@ -207,11 +200,22 @@ public class Program3 extends Application {
       
         // Handler class
        class SimpleEventHandler implements EventHandler<ActionEvent> {
-       public void handle(ActionEvent event) {
+           TextField KDisplay;
            
+           public SimpleEventHandler (TextField KDisplayIn){
+               KDisplay=KDisplayIn;
+               
+           }
+        public void handle(ActionEvent event) {
+           Object source=event.getSource();
+           Button clickedBtn=(Button) source;
+           KDisplay.setText("*");
+           KDisplay.setText(KDisplay.getText() + "*");
+        
            //if star key enteted, text erased
            if(button10.isPressed())
            {
+               //erase text after two clicks
               text = null; 
            }
            
